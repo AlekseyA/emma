@@ -1,0 +1,40 @@
+{
+  "name": "emma",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tsc",
+    "dev": "nodemon server.ts",
+    "start": "npm run build && node ./dist/server.js",
+    "migrate": "knex migrate:latest",
+    "seed": "knex seed:run",
+    "test": "jest"
+  },
+  "_moduleAliases": {
+    "@user": "dist/app/@user"
+  },
+  "author": "Alexey A",
+  "license": "ISC",
+  "dependencies": {
+    "@types/jsonstream": "^0.8.30",
+    "@types/node": "^16.11.6",
+    "JSONStream": "^1.3.5",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "knex": "^0.95.13",
+    "mysql2": "^2.3.3-rc.0",
+    "redis": "^3.1.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/jest": "^27.0.2",
+    "@types/redis": "^2.8.32",
+    "jest": "^27.3.1",
+    "nodemon": "^2.0.4",
+    "ts-jest": "^27.0.7",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.4.4"
+  }
+}
